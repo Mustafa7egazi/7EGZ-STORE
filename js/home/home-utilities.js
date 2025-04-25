@@ -142,7 +142,7 @@ async function handleLoader() {
     showInfo.addEventListener("click", function (e) {
       e.preventDefault();
       let product = JSON.parse(decodeURIComponent(this.dataset.product));
-      window.location.replace(`/pages/product-info.html?id=${product.id}`);
+      window.location.replace(`./product-info.html?id=${product.id}`);
     });
 
     row.appendChild(item);
@@ -215,7 +215,7 @@ function addToCart(product) {
         (item) => item.owner === currentUser.email
       );
       if (items) {
-        window.location.replace("/pages/cart.html");
+        window.location.replace("./cart.html");
       } else {
         let warningModal = new Modal({
           title: "You cart is Empty!",
@@ -232,7 +232,7 @@ function checkLoginStatus() {
   let status = localStorage.getItem("status");
   let remembered = localStorage.getItem("rememberMe");
   if (status === "loggedOut" && remembered === "false") {
-    window.location.replace("/index.html");
+    window.location.replace("../index.html");
   }
 }
 
@@ -243,7 +243,7 @@ function makeUserLogOut() {
 
     localStorage.setItem("status", "loggedOut");
     localStorage.setItem("rememberMe", "false");
-    window.location.replace("/index.html");
+    window.location.replace("../index.html");
   });
 }
 
@@ -383,7 +383,7 @@ function reRenderProducts(listOfFilteredProducts) {
       showInfo.addEventListener("click", function (e) {
         e.preventDefault();
         let product = JSON.parse(decodeURIComponent(this.dataset.product));
-        window.location.replace(`/pages/product-info.html?id=${product.id}`);
+        window.location.replace(`./product-info.html?id=${product.id}`);
       });
 
       row.appendChild(item);
