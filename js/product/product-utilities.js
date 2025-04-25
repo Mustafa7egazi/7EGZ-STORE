@@ -53,7 +53,7 @@ async function handleLoadingInfo() {
     e.preventDefault();
     let product = JSON.parse(decodeURIComponent(this.dataset.product));
     addToCart(product);
-    window.location.replace("7EGZ-STORE/pages/cart.html");
+    window.location.replace("/pages/cart.html");
   });
   cardContainer.appendChild(card);
 

@@ -28,7 +28,7 @@ document.addEventListener("DOMContentLoaded", function () {
     let rememberMeValue = localStorage.getItem("rememberMe");
     let status = localStorage.getItem("status");
     if (rememberMeValue === "true" && status === "loggedIn") {
-      window.location.replace("7EGZ-STORE/pages/home.html");
+      window.location.replace("pages/home.html");
     }
   }
 });
@@ -93,7 +93,7 @@ if (window.location.href.includes("register.html")) {
           saveUserLocalStorage(user);
           resetInputs(nameAtRegister, emailAtRegister, passwordAtRegister, confirmPasswordAtRegister);
           setTimeout(() => {
-            window.location.replace("7EGZ-STORE/index.html");
+            window.location.replace("/index.html");
           }, 1000);
         }
       }
@@ -132,7 +132,7 @@ if (!window.location.href.includes("register.html")) {
         showAuthScreensMessage("Login successful", loginMessage);
         localStorage.setItem("status", "loggedIn");
         setTimeout(() => {
-          window.location.replace("7EGZ-STORE/pages/home.html");
+          window.location.replace("pages/home.html");
         }, 500);
         return;
       } else {

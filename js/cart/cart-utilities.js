@@ -163,7 +163,7 @@ function renderCartItemsAsCards() {
 
   shipmentBtn.addEventListener("click", () => {
     localStorage.removeItem("inCart");
-    window.location.replace("7EGZ-STORE/pages/thank-you.html");
+    window.location.replace("pages/thank-you.html");
   });
 
   shipmentBtnContainer.appendChild(shipmentBtn);
